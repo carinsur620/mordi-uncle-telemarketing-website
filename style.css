@@ -6,31 +6,32 @@ body {
     color: #0f172a;
 }
 
+/* NAVBAR (GLOBAL FIXED) */
 nav {
-    background: #0284c7;
+    background: linear-gradient(135deg, #1d4ed8, #2563eb); /* 🔥 SAME EVERYWHERE */
     display: flex;
     align-items: center;
-    justify-content: center; /* keeps menu centered */
+    justify-content: center;
     padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Wrap links in a container */
+/* NAV LINKS */
 .nav-links {
     display: flex;
     gap: 40px;
 }
 
-/* LOGO stays left */
+/* LOGO LEFT */
 nav img {
     position: absolute;
     left: 20px;
     width: 50px;
 }
 
-/* Links */
+/* LINKS */
 nav a {
     color: white;
     text-decoration: none;
@@ -40,14 +41,14 @@ nav a {
     transition: 0.3s;
 }
 
-/* Hover */
-nav a:hover {
-    background: rgba(255,255,255,0.15);
-}
-
-/* Active page */
+/* ACTIVE + HOVER */
 nav a.active {
     background: rgba(255,255,255,0.25);
+    transform: scale(1.05);
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.15);
 }
 
 /* HERO */
@@ -55,36 +56,33 @@ nav a.active {
     background: linear-gradient(135deg, #1d4ed8, #3b82f6, #60a5fa);
     color: white;
     text-align: center;
-    padding: 60px 20px;
-    margin-top: 0;
+    padding: 55px 20px;
+    margin: 0;
 }
 
 /* BUTTON */
 .btn {
     display: inline-block;
-    width: auto !important;
-    max-width: 220px;
     background: white;
     color: #1d4ed8;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 6px;
     margin-top: 15px;
-    font-weight: 500;
-    transition: 0.3s;
+    width: auto !important;
 }
 
 .btn:hover {
     background: #e2e8f0;
 }
 
-/* SECTIONS */
+/* SECTIONS (FIXED SPACING) */
 .section {
     padding: 35px 20px;
     text-align: center;
     background: #f8fafc;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto 10px auto; /* 🔥 removes big gaps */
 }
 
 .section h2 {
@@ -104,7 +102,7 @@ nav a.active {
     margin-top: 20px;
 }
 
-/* GENERAL CARD */
+/* CARD */
 .card {
     background: white;
     padding: 20px;
@@ -124,7 +122,7 @@ nav a.active {
     color: #1d4ed8;
 }
 
-/* SERVICE CARDS (ICON STYLE) */
+/* SERVICE CARDS */
 .service-card {
     background: white;
     padding: 30px 20px;
@@ -149,6 +147,7 @@ nav a.active {
     font-size: 14px;
 }
 
+/* ICON */
 .icon {
     font-size: 30px;
     background: #e0ecff;
@@ -209,15 +208,17 @@ form button:hover {
     border-radius: 10px;
 }
 
-/* FOOTER */
+/* 🔥 FOOTER FIX (FULL WIDTH) */
 footer {
     background: #020617;
     color: white;
     text-align: center;
     padding: 20px;
+    width: 100%;
+    margin: 0;
 }
 
-/* GLOBAL FIX */
+/* GLOBAL */
 html, body {
     background: white !important;
 }
