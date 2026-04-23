@@ -1,115 +1,94 @@
-body {
+/* RESET */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: white;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
     overflow-x: hidden;
+    font-family: Arial, sans-serif;
     color: #0f172a;
 }
 
-/* NAVBAR (GLOBAL FIXED) */
+/* NAVBAR (CONSISTENT COLOR) */
 nav {
-    background: linear-gradient(135deg, #1d4ed8, #2563eb); /* 🔥 SAME EVERYWHERE */
+    background: #0284c7; /* SAME across ALL pages */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 20px;
-    position: sticky;
+    padding: 10px 20px;
+    position: fixed; /* 🔥 needed for hide on scroll */
+    width: 100%;
     top: 0;
     z-index: 1000;
+    transition: top 0.3s;
 }
 
-/* NAV LINKS */
-nav {
-    background: #0284c7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px; /* 🔥 smaller height */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* HIDE NAV ON SCROLL */
+nav.hide {
+    top: -80px;
 }
 
 /* LOGO */
 nav img {
     position: absolute;
     left: 15px;
-    width: 40px; /* 🔥 smaller logo */
+    width: 40px;
 }
 
 /* LINKS */
 .nav-links {
     display: flex;
-    gap: 25px; /* 🔥 less space between links */
+    gap: 25px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 15px; /* 🔥 slightly smaller text */
+    font-size: 15px;
     padding: 5px 8px;
     border-radius: 6px;
 }
-/* HERO */
-.hero {
-    background: url('background.png') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-    position: relative;
+
+nav a.active {
+    background: rgba(255,255,255,0.25);
 }
 
-/* DARK OVERLAY (makes text readable) */
+/* HERO (IMAGE BACKGROUND) */
+.hero {
+    background: url('background.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px 60px;
+    position: relative;
+    margin-top: 60px; /* 🔥 prevents overlap with navbar */
+}
+
 .hero::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5); /* 🔥 dark overlay */
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
 }
 
-/* KEEP TEXT ABOVE OVERLAY */
 .hero * {
     position: relative;
 }
-/* BUTTON */
-.btn {
-    display: inline-block;
-    background: white;
-    color: #1d4ed8;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    margin-top: 15px;
-    width: auto !important;
-}
 
-.btn:hover {
-    background: #e2e8f0;
-}
-
-/* SECTIONS (FIXED SPACING) */
+/* SECTIONS */
 .section {
-    padding: 35px 20px;
-    text-align: center;
-    background: #f8fafc;
+    padding: 40px 20px;
     max-width: 1100px;
-    margin: 0 auto 10px auto; /* 🔥 removes big gaps */
+    margin: auto;
+    text-align: center;
 }
 
-.section h2 {
-    margin: 0 0 8px 0;
-}
-
-.section p {
-    margin: 0 0 8px 0;
-    line-height: 1.6;
-}
-
-/* GRID */
+/* CARDS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -117,257 +96,39 @@ nav a {
     margin-top: 20px;
 }
 
-/* CARD */
 .card {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    color: #0f172a;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    border: 1px solid #e2e8f0;
-    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-    color: #1d4ed8;
-}
-
-/* SERVICE CARDS */
-.service-card {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
-
-.service-card h3 {
-    color: #2563eb;
-    margin-top: 10px;
-}
-
-.service-card p {
-    color: #555;
-    font-size: 14px;
-}
-
-/* ICON */
-.icon {
-    font-size: 30px;
-    background: #e0ecff;
-    color: #2563eb;
-    width: 60px;
-    height: 60px;
+/* FOUNDER SECTION */
+.founder {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: auto;
-}
-
-/* FORM */
-form {
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 14px;
-    margin: 12px 0;
-    border-radius: 8px;
-    border: 1px solid #cbd5e1;
-    font-size: 15px;
-}
-
-form input:focus,
-form textarea:focus {
-    border-color: #0284c7;
-    box-shadow: 0 0 5px rgba(2,132,199,0.4);
-    outline: none;
-}
-
-form button {
-    width: auto;
-    padding: 12px 25px;
-    background: #0284c7;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-form button:hover {
-    background: #0369a1;
-}
-
-/* IMAGES */
-.section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* 🔥 FOOTER FIX (FULL WIDTH) */
-footer {
-    background: #020617;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    margin: 0;
-}
-
-/* GLOBAL */
-html, body {
-    background: white !important;
-}
-/* 📱 MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-
-    /* NAVBAR STACK */
-    nav {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    nav img {
-        position: static;
-        margin-bottom: 10px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    /* HERO SMALLER */
-    .hero {
-        padding: 40px 15px;
-    }
-
-    .hero h1 {
-        font-size: 22px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-    /* SECTIONS */
-    .section {
-        padding: 25px 15px;
-    }
-
-    /* STACK SIDE-BY-SIDE CONTENT */
-    .split {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
+    text-align: left;
 }
 
-    /* CARDS FULL WIDTH */
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    /* BUTTON */
-    .btn {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    /* FORM */
-    form {
-        width: 100%;
-        padding: 0 10px;
-    }
-
+.founder img {
+    width: 200px;
+    border-radius: 12px;
 }
-/* ================= MOBILE FIX ================= */
+
+/* MOBILE FIX */
 @media (max-width: 768px) {
-
-    /* NAVBAR FIX */
-    nav {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
-
-    nav img {
-        position: static;
-        margin-bottom: 10px;
-    }
-
     .nav-links {
-        flex-direction: column;
         gap: 15px;
-        align-items: center;
     }
 
-    /* HERO TEXT */
     .hero {
-        padding: 40px 15px;
+        padding: 90px 15px 50px;
     }
 
-    .hero h1 {
-        font-size: 22px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-    /* FLEX / SPLIT FIX (THIS IS THE BIG ONE) */
-    .flex,
-    .split {
+    .founder {
         flex-direction: column;
         text-align: center;
-    }
-
-    .flex div,
-    .split div {
-        text-align: center;
-    }
-
-    /* IMAGE FIX */
-    .section img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* SECTIONS */
-    .section {
-        padding: 30px 15px;
-    }
-
-    /* CARDS */
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    /* FORM */
-    form {
-        width: 100%;
-        padding: 0 10px;
     }
 }
