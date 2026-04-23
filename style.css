@@ -58,7 +58,7 @@ nav a.active {
 
 /* HERO (IMAGE BACKGROUND) */
 .hero {
-    background: url('background.jpg') center/cover no-repeat;
+    background: url('background.png') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px 60px;
