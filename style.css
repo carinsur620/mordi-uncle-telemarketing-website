@@ -53,13 +53,28 @@ nav a {
 }
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, #1d4ed8, #3b82f6, #60a5fa);
+    background: url('background.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
-    padding: 55px 20px;
-    margin: 0;
+    padding: 80px 20px;
+    position: relative;
 }
 
+/* DARK OVERLAY (makes text readable) */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* 🔥 dark overlay */
+}
+
+/* KEEP TEXT ABOVE OVERLAY */
+.hero * {
+    position: relative;
+}
 /* BUTTON */
 .btn {
     display: inline-block;
