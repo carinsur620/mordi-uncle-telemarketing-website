@@ -231,6 +231,9 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+    body {
+    background: red !important;
+}
 
     .hero {
         padding: 60px 20px;
