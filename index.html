@@ -283,6 +283,21 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     });
 });
 </script>
+<script>
+let lastScroll = 0;
+const nav = document.querySelector("nav");
 
+window.addEventListener("scroll", () => {
+    let currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll) {
+        nav.classList.add("hide");
+    } else {
+        nav.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+});
+</script>
 </body>
 </html>
