@@ -145,6 +145,21 @@ Partner with a team that understands outsourcing, execution, and performance.
 <footer>
 <p>© 2026 Z-Telemarketing</p>
 </footer>
+<script>
+let lastScroll = 0;
+const nav = document.querySelector("nav");
 
+window.addEventListener("scroll", () => {
+    let currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll) {
+        nav.classList.add("hide");
+    } else {
+        nav.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+});
+</script>
 </body>
 </html>
