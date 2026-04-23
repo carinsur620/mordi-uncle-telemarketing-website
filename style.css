@@ -261,11 +261,13 @@ html, body {
     }
 
     /* STACK SIDE-BY-SIDE CONTENT */
-    .split,
-    .section[style*="flex"] {
-        flex-direction: column !important;
-        text-align: center;
-    }
+    .split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 
     /* CARDS FULL WIDTH */
     .cards {
