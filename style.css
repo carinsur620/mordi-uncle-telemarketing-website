@@ -287,3 +287,72 @@ html, body {
     }
 
 }
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+    /* NAVBAR FIX */
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    nav img {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* HERO TEXT */
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    /* FLEX / SPLIT FIX (THIS IS THE BIG ONE) */
+    .flex,
+    .split {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .flex div,
+    .split div {
+        text-align: center;
+    }
+
+    /* IMAGE FIX */
+    .section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 30px 15px;
+    }
+
+    /* CARDS */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* FORM */
+    form {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
