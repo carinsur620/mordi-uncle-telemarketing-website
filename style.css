@@ -222,3 +222,66 @@ footer {
 html, body {
     background: white !important;
 }
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    /* NAVBAR STACK */
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav img {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* HERO SMALLER */
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 25px 15px;
+    }
+
+    /* STACK SIDE-BY-SIDE CONTENT */
+    .split,
+    .section[style*="flex"] {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    /* CARDS FULL WIDTH */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* BUTTON */
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* FORM */
+    form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+}
