@@ -27,8 +27,14 @@ nav {
 }
 
 /* HIDE NAV ON SCROLL */
-nav.hide {
-    top: -80px;
+nav..hide {
+    transform: translateY(-100%);
+    transition: 0.3s;
+}
+
+nav {
+    transition: 0.3s;
+}
 }
 
 /* LOGO */
