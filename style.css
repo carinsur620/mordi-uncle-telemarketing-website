@@ -22,11 +22,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 15px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: 0.3s;
+    padding: 8px 15px; /* smaller */
 }
 
 /* hide on scroll */
@@ -206,26 +202,27 @@ footer {
 }
 
 /* 📱 MOBILE FIX */
+
 @media (max-width: 768px) {
 
-    }
-
     nav {
-        flex-direction: column;
-        padding: 12px;
+        padding: 8px 10px; /* smaller */
     }
 
     nav img {
-        position: static;
-        margin-bottom: 10px;
-        width: 30px;
+        width: 28px; /* smaller logo */
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
+    nav a {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+
+}
     .hero {
         padding: 60px 20px;
     }
