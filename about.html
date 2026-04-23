@@ -282,6 +282,21 @@ At Z-Telemarketing, we focus on one thing: executing outsourcing campaigns that 
 </section>
 <footer>
 <p>© 2026 Z-Telemarketing</p>
+<script>
+let lastScroll = 0;
+const nav = document.querySelector("nav");
 
+window.addEventListener("scroll", () => {
+    let currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll) {
+        nav.classList.add("hide");
+    } else {
+        nav.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+});
+</script>
 </body>
 </html>
