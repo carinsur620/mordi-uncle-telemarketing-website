@@ -19,38 +19,38 @@ nav {
 }
 
 /* NAV LINKS */
-.nav-links {
+nav {
+    background: #0284c7;
     display: flex;
-    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* 🔥 smaller height */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* LOGO LEFT */
+/* LOGO */
 nav img {
     position: absolute;
-    left: 20px;
-    width: 50px;
+    left: 15px;
+    width: 40px; /* 🔥 smaller logo */
 }
 
 /* LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px; /* 🔥 less space between links */
+}
+
 nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 6px 10px;
+    font-size: 15px; /* 🔥 slightly smaller text */
+    padding: 5px 8px;
     border-radius: 6px;
-    transition: 0.3s;
 }
-
-/* ACTIVE + HOVER */
-nav a.active {
-    background: rgba(255,255,255,0.25);
-    transform: scale(1.05);
-}
-
-nav a:hover {
-    background: rgba(255,255,255,0.15);
-}
-
 /* HERO */
 .hero {
     background: linear-gradient(135deg, #1d4ed8, #3b82f6, #60a5fa);
