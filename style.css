@@ -208,9 +208,6 @@ footer {
 /* 📱 MOBILE FIX */
 @media (max-width: 768px) {
 
-    /* TEST (you can remove later) */
-    body {
-        background: red !important;
     }
 
     nav {
