@@ -3,23 +3,17 @@
 <head>
 <title>Z-Telemarketing | Outsourcing Campaigns</title>
 <link rel="stylesheet" href="style.css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
-/* FIX RIGHT SPACE ON MOBILE */
-* {
-    box-sizing: border-box;
-}
-
-/* NAVBAR (MATCH ALL PAGES) */
+/* NAVBAR */
 nav {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 12px 20px;
-    background: #0284c7; /* SAME AS YOUR CSS */
+    background: #0284c7;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -31,14 +25,12 @@ nav {
     gap: 30px;
 }
 
-/* LOGO */
 nav img {
     position: absolute;
     left: 15px;
     height: 35px;
 }
 
-/* NAV LINKS */
 nav a {
     color: white;
     text-decoration: none;
@@ -47,28 +39,23 @@ nav a {
     border-radius: 6px;
 }
 
-/* HIDE NAV */
 nav.hide {
     transform: translateY(-100%);
 }
 
-/* HERO WITH IMAGE */
+/* HERO */
 .hero {
-    background: url("ztt.png") center/cover no-repeat; /* 🔥 YOUR IMAGE */
+    background: url("ztt.png") center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
     position: relative;
 }
 
-/* DARK OVERLAY FOR TEXT VISIBILITY */
 .hero::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: rgba(0,0,0,0.5);
 }
 
@@ -91,7 +78,7 @@ nav.hide {
     font-weight: bold;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
     padding: 60px 20px;
     text-align: center;
@@ -125,21 +112,19 @@ nav.hide {
     text-align: left;
 }
 
-/* FOUNDER SECTION */
+/* FOUNDER (FIXED + CENTERED) */
 .founder {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    text-align: left;
+    text-align: center;
 }
 
 .founder img {
-<img src="founder.png" class="founder-img">
-    border-radius: 12px;
+    width: 180px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width: 768px) {
     .nav-links {
         gap: 15px;
@@ -153,11 +138,6 @@ nav.hide {
     .hero {
         padding: 80px 15px;
     }
-
-    .founder {
-        text-align: center;
-        justify-content: center;
-    }
 }
 
 </style>
@@ -168,7 +148,6 @@ nav.hide {
 <!-- NAV -->
 <nav>
 <img src="logo.png">
-
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -181,9 +160,11 @@ nav.hide {
 <section class="hero">
 <h1>Outsourcing Campaigns That Drive Real Results</h1>
 <p>We manage your outreach, calls, and appointment setting so you can focus on closing deals and scaling your business.</p>
-
 <a class="btn" href="#book">Book appointment</a>
-</section class="section">
+</section>
+
+<!-- TRUSTED PARTNER (FIXED CENTER) -->
+<section class="section">
 <h2>Your Trusted Outsourcing Partner</h2>
 
 <p>
@@ -193,12 +174,10 @@ Z-Telemarketing is a results-driven BPO company based in Nicaragua, providing ne
 <p>
 With over <strong>10 years of experience</strong>, we specialize in customer engagement, lead generation, and structured outreach systems that deliver real business growth.
 </p>
-
 </section>
 
 <!-- ABOUT -->
 <section class="section">
-
 <h2>About Z-Telemarketing</h2>
 
 <p>
@@ -212,12 +191,10 @@ We manage full outsourcing systems including outbound calling, appointment setti
 <p>
 Our approach focuses on consistency, professionalism, and measurable performance to deliver long-term results.
 </p>
-
 </section>
 
 <!-- SERVICES -->
 <section class="section">
-
 <h2>Our Campaign Services</h2>
 
 <div class="cards">
@@ -247,7 +224,6 @@ Our approach focuses on consistency, professionalism, and measurable performance
 </div>
 
 </div>
-
 </section>
 
 <!-- WHY US -->
@@ -256,15 +232,8 @@ Our approach focuses on consistency, professionalism, and measurable performance
 
 <div>
 <h2>Why Choose Us</h2>
-
-<p>
-We combine trained agents, proven systems, and structured strategies to deliver reliable outsourcing performance.
-</p>
-
-<p>
-Our focus is building strong customer interactions and helping businesses scale efficiently.
-</p>
-
+<p>We combine trained agents, proven systems, and structured strategies to deliver reliable outsourcing performance.</p>
+<p>Our focus is building strong customer interactions and helping businesses scale efficiently.</p>
 </div>
 
 <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=1200&q=100">
@@ -272,55 +241,45 @@ Our focus is building strong customer interactions and helping businesses scale 
 </div>
 </section>
 
-<!-- FOUNDER -->
+<!-- FOUNDER (FIXED CLEAN) -->
 <section class="section">
-
 <h2>Founder</h2>
 
 <div class="founder">
-
 <img src="founder.png">
 
-<div>
 <h3>Founder of Z-Telemarketing</h3>
-<section class="section" style="text-align:center;">
 
 <p>
 Z-Telemarketing BPO is here to support your business growth. Based in Nicaragua, we provide nearshore outsourcing solutions with highly skilled English, Spanish, and bilingual professionals.
 </p>
 
 <p>
-Our team brings extensive experience across multiple areas of the BPO industry, allowing us to deliver reliable, efficient, and results-driven support for every campaign we manage.
+Our team brings extensive experience across multiple areas of the BPO industry, delivering reliable and results-driven support.
 </p>
 
 <p>
-With over 10 years of experience, we specialize in appointment setting, customer support, and outbound campaign management — helping businesses scale without building in-house teams.
+With over 10 years of experience, we specialize in appointment setting, customer support, and outbound campaign management.
 </p>
-
+</div>
 </section>
 
 <!-- BOOK FORM -->
 <section class="section" id="book">
-
 <h2>Book Your Appointment</h2>
 
 <div class="form-box">
-
 <form id="contact-form">
-
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="email" name="email" placeholder="Email Address" required>
 <input type="tel" name="phone" placeholder="Phone Number" required>
 <textarea name="message" placeholder="Tell us about your business"></textarea>
-
 <button type="submit">Book Appointment</button>
-
 </form>
 
 <p id="status"></p>
-
 </div>
-
+</section>
 
 <footer>
 <p>© 2026 Z-Telemarketing</p>
@@ -341,12 +300,10 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     .then(function() {
         document.getElementById("status").innerText = "✅ Request sent!";
         document.getElementById("contact-form").reset();
-    }, function(error) {
-        document.getElementById("status").innerText = "❌ Error sending.";
     });
 });
 
-/* HIDE NAV ON SCROLL */
+/* NAV HIDE */
 let lastScroll = 0;
 const nav = document.querySelector("nav");
 
