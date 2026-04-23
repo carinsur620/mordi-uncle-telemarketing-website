@@ -4,40 +4,79 @@
 <title>Z-Telemarketing | Outsourcing Campaigns</title>
 <link rel="stylesheet" href="style.css">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 
-/* NAVBAR */
+/* FIX RIGHT SPACE ON MOBILE */
+* {
+    box-sizing: border-box;
+}
+
+/* NAVBAR (MATCH ALL PAGES) */
 nav {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    justify-content: center;
+    padding: 12px 20px;
+    background: #0284c7; /* SAME AS YOUR CSS */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: 0.3s;
 }
 
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* LOGO */
 nav img {
-    height: 40px;
+    position: absolute;
+    left: 15px;
+    height: 35px;
 }
 
+/* NAV LINKS */
 nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     padding: 6px 10px;
     border-radius: 6px;
-    transition: 0.3s;
 }
 
-nav a:hover {
-    background: rgba(255,255,255,0.15);
+/* HIDE NAV */
+nav.hide {
+    transform: translateY(-100%);
 }
 
-/* HERO */
+/* HERO WITH IMAGE */
 .hero {
-    background: linear-gradient(135deg, #1d4ed8, #3b82f6, #60a5fa);
+    background: url("ztt.png") center/cover no-repeat; /* 🔥 YOUR IMAGE */
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 100px 20px;
+    position: relative;
+}
+
+/* DARK OVERLAY FOR TEXT VISIBILITY */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero h1,
+.hero p,
+.hero a {
+    position: relative;
+    z-index: 1;
 }
 
 /* BUTTON */
@@ -58,18 +97,11 @@ nav a:hover {
     text-align: center;
 }
 
-/* SERVICES */
+/* GRID */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-}
-
-.services-box {
-    background: linear-gradient(135deg, #1d4ed8, #2563eb);
-    color: white;
-    padding: 40px 20px;
-    border-radius: 10px;
 }
 
 /* SPLIT */
@@ -93,50 +125,47 @@ nav a:hover {
     text-align: left;
 }
 
-/* CARDS */
-.card {
-    background: #1d4ed8;
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
+/* FOUNDER SECTION */
+.founder {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: left;
 }
 
-/* FORM */
-.form-box {
-    max-width: 500px;
-    margin: auto;
-    background: #f1f5f9;
-    padding: 30px;
-    border-radius: 10px;
+.founder img {
+    width: 220px;
+    border-radius: 12px;
 }
 
-.form-box input, .form-box textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+    }
 
-.form-box button {
-    width: 100%;
-    padding: 12px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
+    nav img {
+        height: 30px;
+    }
 
-/* SCROLL */
-html {
-    scroll-behavior: smooth;
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .founder {
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 </style>
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <body>
 
+<!-- NAV -->
 <nav>
 <img src="logo.png">
 
@@ -146,8 +175,8 @@ html {
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </div>
-
 </nav>
+
 <!-- HERO -->
 <section class="hero">
 <h1>Outsourcing Campaigns That Drive Real Results</h1>
@@ -162,15 +191,15 @@ html {
 <h2>About Z-Telemarketing</h2>
 
 <p>
-With over 10 years of experience in the outsourcing industry, Z-Telemarketing has helped businesses streamline their operations and scale through high-performance communication campaigns.
+With over 10 years of experience in the outsourcing industry, Z-Telemarketing has helped businesses streamline operations and scale through high-performance communication campaigns.
 </p>
 
 <p>
-We specialize in managing full outsourcing systems including outbound calling, appointment setting, and customer support — allowing companies to grow without the need to build and manage internal teams.
+We manage full outsourcing systems including outbound calling, appointment setting, and customer support — allowing companies to grow without building internal teams.
 </p>
 
 <p>
-Our approach focuses on consistency, professionalism, and measurable performance, ensuring every campaign delivers real value and long-term results.
+Our approach focuses on consistency, professionalism, and measurable performance to deliver long-term results.
 </p>
 
 </section>
@@ -185,25 +214,25 @@ Our approach focuses on consistency, professionalism, and measurable performance
 <div class="service-card">
 <div class="icon">📅</div>
 <h3>Appointment Setting</h3>
-<p>We schedule qualified appointments directly into your calendar with prospects ready to engage.</p>
+<p>We schedule qualified appointments directly into your calendar.</p>
 </div>
 
 <div class="service-card">
 <div class="icon">📞</div>
 <h3>Outbound Calling</h3>
-<p>Experienced agents execute structured call campaigns designed for performance and consistency.</p>
+<p>Structured call campaigns designed for performance.</p>
 </div>
 
 <div class="service-card">
 <div class="icon">🎧</div>
 <h3>Customer Support</h3>
-<p>Dedicated support teams handling customer interactions professionally and efficiently.</p>
+<p>Professional support teams representing your brand.</p>
 </div>
 
 <div class="service-card">
 <div class="icon">📈</div>
 <h3>Sales Campaigns</h3>
-<p>Complete outbound sales systems focused on increasing conversions and revenue growth.</p>
+<p>Outbound systems focused on increasing revenue.</p>
 </div>
 
 </div>
@@ -218,15 +247,11 @@ Our approach focuses on consistency, professionalism, and measurable performance
 <h2>Why Choose Us</h2>
 
 <p>
-We combine trained agents, proven systems, and structured campaign strategies to deliver reliable outsourcing performance.
+We combine trained agents, proven systems, and structured strategies to deliver reliable outsourcing performance.
 </p>
 
 <p>
-Our team focuses on building strong customer interactions, improving conversion rates, and helping businesses scale efficiently without increasing internal workload.
-</p>
-
-<p>
-With a track record built over a decade, we understand what it takes to run successful campaigns across different industries.
+Our focus is building strong customer interactions and helping businesses scale efficiently.
 </p>
 
 </div>
@@ -234,6 +259,32 @@ With a track record built over a decade, we understand what it takes to run succ
 <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=1200&q=100">
 
 </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="section">
+
+<h2>Founder</h2>
+
+<div class="founder">
+
+<img src="founder.png">
+
+<div>
+<h3>Founder of Z-Telemarketing</h3>
+
+<p>
+With over a decade of experience in outsourcing and campaign management, the founder of Z-Telemarketing built this company with a clear vision: deliver reliable, scalable communication systems that help businesses grow.
+</p>
+
+<p>
+Focused on discipline, performance, and consistency, the leadership behind Z-Telemarketing ensures every campaign meets high standards and delivers real business value.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- BOOK FORM -->
@@ -282,8 +333,8 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
         document.getElementById("status").innerText = "❌ Error sending.";
     });
 });
-</script>
-<script>
+
+/* HIDE NAV ON SCROLL */
 let lastScroll = 0;
 const nav = document.querySelector("nav");
 
@@ -299,5 +350,6 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 </script>
+
 </body>
 </html>
