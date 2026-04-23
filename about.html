@@ -3,121 +3,9 @@
 <head>
 <title>About</title>
 <link rel="stylesheet" href="style.css">
-
-<style>
-
-/* GLOBAL RESET */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f8fafc;
-    color: #0f172a;
-}
-
-/* NAVBAR */
-nav {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #1d4ed8, #2563eb);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
-nav img {
-    height: 40px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 7px 12px;
-    border-radius: 6px;
-    transition: 0.25s;
-}
-
-nav a:hover {
-    background: rgba(255,255,255,0.15);
-}
-
-nav a.active {
-    background: rgba(255,255,255,0.25);
-}
-
-/* SECTIONS (FIXED SPACING 🔥) */
-.section {
-    padding: 50px 20px; /* reduced from 80px */
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* TITLES */
-h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-/* TEXT */
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #475569;
-}
-
-/* FLEX */
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* IMAGE */
-.section img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 14px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-}
-
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-.card h3 {
-    color: #1d4ed8;
-    margin-bottom: 8px;
-}
-
-/* FINAL */
-.final {
-    background: white;
-    text-align: center;
-    padding: 40px;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-</style>
-</head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <body>
 
 <!-- NAV -->
@@ -127,10 +15,9 @@ p {
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
-<a href="about.html">About</a>
+<a href="about.html" class="active">About</a>
 <a href="contact.html">Contact</a>
 </div>
-
 </nav>
 
 <!-- WORK ENVIRONMENT -->
@@ -207,7 +94,7 @@ We aim to become a long-term partner for our clients by delivering consistent ex
 
 </section>
 
-<!-- RESULTS (FIXED 🔥) -->
+<!-- RESULTS -->
 <section class="section" style="text-align:center;">
 
 <h2>Our Performance</h2>
@@ -281,8 +168,12 @@ At Z-Telemarketing, we focus on one thing: executing outsourcing campaigns that 
 </p>
 
 </section>
+
 <footer>
 <p>© 2026 Z-Telemarketing</p>
+</footer>
+
+<!-- NAV HIDE SCRIPT -->
 <script>
 let lastScroll = 0;
 const nav = document.querySelector("nav");
@@ -299,5 +190,6 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 </script>
+
 </body>
 </html>
