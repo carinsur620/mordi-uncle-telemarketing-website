@@ -160,7 +160,7 @@ img {
 
 .founder img {
     width: 200px;
-    border-radius: 8px; /* slight smooth edges, not round */
+    border-radius: 0% /* slight smooth edges, not round */
     display: block;
     margin: 20px auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
