@@ -1,153 +1,295 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Contact</title>
+<title>Z-Telemarketing | Outsourcing Campaigns</title>
 <link rel="stylesheet" href="style.css">
-
-<script>
-function handleSubmit(e) {
-    e.preventDefault();
-
-    const form = e.target;
-
-    fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-    }).then(response => {
-        if (response.ok) {
-            document.getElementById("successMessage").style.display = "block";
-            form.reset();
-        } else {
-            alert("Something went wrong.");
-        }
-    });
-}
-</script>
-
-</head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* NAVBAR (MATCH ALL PAGES) */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* 🔥 smaller */
+    background: #0284c7; /* 🔥 SAME COLOR */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav img {
+    position: absolute;
+    left: 20px;
+    height: 35px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 8px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* HIDE NAV */
+nav.hide {
+    transform: translateY(-100%);
+    transition: 0.3s;
+}
+
+/* HERO WITH IMAGE */
+.hero {
+    background: url("ztt.png") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+/* DARK OVERLAY */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero * {
+    position: relative;
+}
+
+/* BUTTON */
+.btn {
+    background: white;
+    color: #0284c7;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* SPLIT */
+.split {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.split div {
+    flex: 1;
+    min-width: 260px;
+}
+
+/* FORM */
+.form-box {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* FOUNDER */
+.founder {
+    text-align: center;
+}
+
+.founder img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* FIX MOBILE GAP */
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+</style>
+</head>
+
 <body>
 
 <nav>
 <img src="logo.png">
-
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </div>
-
 </nav>
+
 <!-- HERO -->
 <section class="hero">
-<h1>Contact Us</h1>
-<p>Start your outsourcing campaign today</p>
+<h1>Outsourcing Campaigns That Drive Real Results</h1>
+<p>We manage your outreach, calls, and appointment setting so you can focus on scaling your business.</p>
+<a class="btn" href="#book">Book Appointment</a>
 </section>
 
-<!-- INTRO -->
+<!-- ABOUT -->
 <section class="section">
-<h2>Get In Touch</h2>
+<h2>About Z-Telemarketing</h2>
 
 <p>
-With over <strong>10+ years of experience</strong>, Z-Telemarketing helps businesses scale through professional outsourcing campaigns and structured outreach systems.
+With over 10 years of experience, we specialize in managing full outsourcing campaigns including outbound calling, appointment setting, and customer support.
 </p>
 
 <p>
-Contact us today to launch or improve your campaign with a team focused on real performance and consistent execution.
+Our goal is simple: help businesses scale without the need to build internal teams.
 </p>
-
-<p><strong>Email:</strong> ztelemarketingt@gmail.com</p>
-<p><strong>Business Hours:</strong> Mon–Fri, 9AM–6PM</p>
 </section>
 
-<!-- WHY CONTACT -->
+<!-- SERVICES -->
 <section class="section">
-<h2>Why Work With Us?</h2>
+<h2>Our Campaign Services</h2>
 
 <div class="cards">
 
-<div class="card">
-<h3>Fast Response</h3>
-<p>We respond quickly to all business inquiries.</p>
+<div class="service-card">
+<h3>Appointment Setting</h3>
+<p>We fill your calendar with qualified prospects.</p>
 </div>
 
-<div class="card">
-<h3>Custom Campaigns</h3>
-<p>Every strategy is tailored to your business goals.</p>
+<div class="service-card">
+<h3>Outbound Calling</h3>
+<p>Structured campaigns executed by trained agents.</p>
 </div>
 
-<div class="card">
-<h3>Experienced Team</h3>
-<p>Work with trained agents and outsourcing professionals.</p>
+<div class="service-card">
+<h3>Customer Support</h3>
+<p>Professional communication with your customers.</p>
+</div>
+
+<div class="service-card">
+<h3>Sales Campaigns</h3>
+<p>Systems focused on increasing revenue.</p>
 </div>
 
 </div>
+</section>
+
+<!-- WHY US -->
+<section class="section split">
+
+<div>
+<h2>Why Choose Us</h2>
+
+<p>We combine trained agents, proven systems, and real experience.</p>
+
+<p>Our campaigns are built for consistency, performance, and scalability.</p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=1200&q=100" style="max-width:400px; border-radius:10px;">
+
+</section>
+
+<!-- FOUNDER -->
+<section class="section founder">
+<h2>Founder</h2>
+
+<img src="founder.png">
+
+<p><strong>Your Name</strong></p>
+
+<p>
+Founder of Z-Telemarketing with over 10 years of experience in outsourcing campaigns and business communication systems.
+</p>
 
 </section>
 
 <!-- FORM -->
-<section class="section">
+<section class="section" id="book">
+<h2>Book Appointment</h2>
 
-<h2 style="text-align:center;">Send Us a Message</h2>
-
-<form action="https://formspree.io/f/xbdqokaq" method="POST" onsubmit="handleSubmit(event)">
+<div class="form-box">
+<form id="contact-form">
 
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="email" name="email" placeholder="Email Address" required>
 <input type="tel" name="phone" placeholder="Phone Number">
-<textarea name="message" placeholder="Tell us about your business"></textarea>
 
-<button type="submit">Send Message</button>
-
-<p id="successMessage" style="
-display:none;
-color:green;
-background:#e0fce0;
-padding:10px;
-border-radius:5px;
-margin-top:15px;">
-✅ Message sent successfully!
-</p>
+<button type="submit">Book Appointment</button>
 
 </form>
 
+<p id="status"></p>
+</div>
 </section>
-<script>
-let lastScroll = 0;
-const nav = document.querySelector("nav");
 
-window.addEventListener("scroll", () => {
-    let currentScroll = window.pageYOffset;
-
-    if (currentScroll > lastScroll) {
-        nav.classList.add("hide");
-    } else {
-        nav.classList.remove("hide");
-    }
-
-    lastScroll = currentScroll;
-});
-</script>
-<footer>
+<footer style="background:#020617;color:white;text-align:center;padding:20px;">
 <p>© 2026 Z-Telemarketing</p>
 </footer>
+
+<!-- EMAIL -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("mqQaUpNKPv0DRK-T_");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+e.preventDefault();
+
+emailjs.sendForm("service_ps4i8uk", "template_0kd3yig", this)
+.then(() => {
+document.getElementById("status").innerText = "✅ Sent!";
+this.reset();
+});
+});
+</script>
+
+<!-- HIDE NAV -->
 <script>
 let lastScroll = 0;
 const nav = document.querySelector("nav");
 
 window.addEventListener("scroll", () => {
-    let currentScroll = window.pageYOffset;
+let currentScroll = window.pageYOffset;
 
-    if (currentScroll > lastScroll) {
-        nav.classList.add("hide");
-    } else {
-        nav.classList.remove("hide");
-    }
+if (currentScroll > lastScroll) {
+nav.classList.add("hide");
+} else {
+nav.classList.remove("hide");
+}
 
-    lastScroll = currentScroll;
+lastScroll = currentScroll;
 });
 </script>
+
 </body>
 </html>
