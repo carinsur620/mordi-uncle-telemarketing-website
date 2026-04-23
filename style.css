@@ -159,10 +159,11 @@ img {
 }
 
 .founder img {
-    width: 150px;
-    border-radius: 50%;
+    width: 200px;
+    border-radius: 8px; /* slight smooth edges, not round */
     display: block;
     margin: 20px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* FORM */
