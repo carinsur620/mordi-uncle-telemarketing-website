@@ -1,97 +1,120 @@
-/* RESET */
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    overflow-x: hidden;
     font-family: Arial, sans-serif;
+    background: white;
+    overflow-x: hidden;
     color: #0f172a;
 }
 
-/* NAVBAR (CONSISTENT COLOR) */
+/* NAVBAR */
 nav {
-    background: #0284c7; /* SAME across ALL pages */
+    background: #0284c7;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
-    position: fixed; /* 🔥 needed for hide on scroll */
-    width: 100%;
+    padding: 12px 20px;
+    position: sticky;
     top: 0;
     z-index: 1000;
-    transition: top 0.3s;
-}
-
-/* HIDE NAV ON SCROLL */
-nav..hide {
-    transform: translateY(-100%);
     transition: 0.3s;
 }
 
-nav {
-    transition: 0.3s;
-}
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
 
 /* LOGO */
 nav img {
     position: absolute;
-    left: 15px;
-    width: 40px;
+    left: 20px;
+    width: 45px;
 }
 
 /* LINKS */
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
-
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 15px;
-    padding: 5px 8px;
+    font-weight: 500;
+    padding: 6px 10px;
     border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.15);
 }
 
 nav a.active {
     background: rgba(255,255,255,0.25);
 }
 
-/* HERO (IMAGE BACKGROUND) */
+/* HERO */
 .hero {
-    background: url('background.png') center/cover no-repeat;
     color: white;
     text-align: center;
-    padding: 100px 20px 60px;
-    position: relative;
-    margin-top: 60px; /* 🔥 prevents overlap with navbar */
+    padding: 60px 20px;
+    background-size: cover;
+    background-position: center;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    top: 0;
-    left: 0;
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: white;
+    color: #1d4ed8;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
 }
 
-.hero * {
-    position: relative;
+.btn:hover {
+    background: #e2e8f0;
 }
 
 /* SECTIONS */
 .section {
-    padding: 40px 20px;
-    max-width: 1100px;
-    margin: auto;
+    padding: 35px 20px;
     text-align: center;
+    background: #f8fafc;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    margin-bottom: 8px;
+}
+
+.section p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* FLEX */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* IMAGES (FIXED SIZE 🔥) */
+.section img {
+    width: 100%;
+    max-width: 320px; /* 🔥 smaller so it doesn’t look huge */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* FOUNDER IMAGE CENTER FIX 🔥 */
+.founder-img {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    border-radius: 50%;
 }
 
 /* CARDS */
@@ -106,35 +129,109 @@ nav a.active {
     background: white;
     padding: 20px;
     border-radius: 12px;
+    color: #0f172a;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
 }
 
-/* FOUNDER SECTION */
-.founder {
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #1d4ed8;
+}
+
+/* SERVICE CARDS */
+.service-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.icon {
+    font-size: 28px;
+    background: #e0ecff;
+    color: #2563eb;
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    text-align: left;
+    justify-content: center;
+    border-radius: 50%;
+    margin: auto;
 }
 
-.founder img {
-    width: 200px;
-    border-radius: 12px;
+/* FORM */
+form {
+    max-width: 500px;
+    margin: 20px auto;
 }
 
-/* MOBILE FIX */
+form input,
+form textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+}
+
+form button {
+    padding: 12px 25px;
+    background: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0369a1;
+}
+
+/* FOOTER */
+footer {
+    background: #020617;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* NAV HIDE */
+.hide {
+    transform: translateY(-100%);
+}
+
+/* 🔥 MOBILE FIX */
 @media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav img {
+        position: static;
+        width: 40px;
+        margin-bottom: 5px;
+    }
+
     .nav-links {
         gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .hero {
-        padding: 90px 15px 50px;
+    .section {
+        padding: 25px 15px;
     }
 
-    .founder {
-        flex-direction: column;
-        text-align: center;
+    .section img {
+        max-width: 250px;
     }
 }
