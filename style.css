@@ -22,7 +22,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 15px; /* smaller */
+    padding: 8px 15px;
 }
 
 /* hide on scroll */
@@ -30,11 +30,11 @@ nav.hide {
     transform: translateY(-100%);
 }
 
-/* LOGO FIX */
+/* LOGO */
 nav img {
     position: absolute;
     left: 15px;
-    width: 35px; /* smaller = FIX */
+    width: 35px;
 }
 
 /* LINKS */
@@ -61,7 +61,7 @@ nav a.active {
     background: rgba(255,255,255,0.25);
 }
 
-/* HERO IMAGE */
+/* HERO */
 .hero {
     background: url("ztt.png") center/cover no-repeat;
     color: white;
@@ -70,7 +70,6 @@ nav a.active {
     position: relative;
 }
 
-/* overlay */
 .hero::before {
     content: "";
     position: absolute;
@@ -140,15 +139,15 @@ nav a.active {
     gap: 30px;
 }
 
-/* IMAGE FIX */
+/* IMAGES */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* ABOUT IMAGE FIX */
+/* ABOUT IMAGE */
 .section img {
-    max-width: 300px; /* FIX TOO BIG IMAGE */
+    max-width: 300px;
     width: 100%;
     border-radius: 10px;
 }
@@ -160,7 +159,7 @@ img {
 
 .founder img {
     width: 200px;
-    border-radius: 0% /* slight smooth edges, not round */
+    border-radius: 0; /* FIXED */
     display: block;
     margin: 20px auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -194,25 +193,29 @@ form button:hover {
     background: #0369a1;
 }
 
-/* FOOTER */
+/* FOOTER 🔥 FULL WIDTH FIX */
 footer {
-    width: 100%;
     background: #020617;
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
-}
-/* 📱 MOBILE FIX */
 
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
 
     nav {
-        padding: 8px 10px; /* smaller */
+        padding: 8px 10px;
     }
 
     nav img {
-        width: 28px; /* smaller logo */
+        width: 28px;
     }
 
     .nav-links {
@@ -224,7 +227,6 @@ footer {
         padding: 4px 6px;
     }
 
-}
     .hero {
         padding: 60px 20px;
     }
@@ -232,5 +234,4 @@ footer {
     .section {
         padding: 40px 15px;
     }
-
 }
