@@ -302,7 +302,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 
     emailjs.sendForm("service_ps4i8uk", "template_0kd3yig", this)
     .then(function() {
-      document.getElementById("status").innerText = "Thank you! One of our agents will contact you soon.";
+      document.getElementById("status").innerText = "Your request has been  recieved! One of our agents will contact you shortly.";
         document.getElementById("contact-form").reset();
     });
 });
