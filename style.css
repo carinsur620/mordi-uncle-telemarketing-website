@@ -195,11 +195,13 @@ form button:hover {
 }
 
 /* FOOTER */
-footer {
+.footer {
+    width: 100%;
     background: #020617;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
 /* 📱 MOBILE FIX */
