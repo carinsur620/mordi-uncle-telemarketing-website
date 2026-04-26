@@ -193,6 +193,11 @@ form button:hover {
     background: #0369a1;
 }
 
+#status {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #16a34a; /* green success */
+}
 /* FOOTER 🔥 FULL WIDTH FIX */
 footer {
     background: #020617;
