@@ -195,15 +195,20 @@ form button:hover {
 }
 
 /* FOOTER */
-.footer {
-    width: 100%;
+footer {
+    width: 100vw;              /* force full screen width */
     background: #020617;
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
-}
 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
 /* 📱 MOBILE FIX */
 
 @media (max-width: 768px) {
